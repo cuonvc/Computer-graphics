@@ -216,18 +216,30 @@ void VD02() {
 	// }
 	
 	// //Cách ?:
-	for (int i = 0; i < row; i++) {
-		for (int j = 0; j < col; j++) {
-			glVertex2f(shape[i][j], shape[i][j + 1]);
-			break;
-		}
-	}
+	// for (int i = 0; i < row; i++) {
+	// 	for (int j = 0; j < col; j++) {
+	// 		glVertex2f(shape[i][j], shape[i][j + 1]);
+	// 		break;
+	// 	}
+	// }
 
 
 	// //Cách ? + 1
 	// for (int i = 0; i < row; i++) {
 	// 	glVertex2f(shape[i][0], shape[i][1]);
 	// }
+
+	//convert về cách 3 (mảng 1 chiều)
+	float newArray[row * col];
+	for (int i = 0; i < row; i++) {
+		for (int j = 0; j < col; j++) {
+			newArray[i * col + j] = shape[i][j];
+		}
+	}
+
+	for (int i = 0; i < row * col; i+=2) {
+		glVertex2f(newArray[i], newArray[i + 1]);
+	}
 
 	
 	glEnd(); // 
