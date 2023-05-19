@@ -135,6 +135,7 @@
   <ItemGroup>
     <ClCompile Include="DrawWithArray.cpp" />
     <ClCompile Include="May15.cpp" />
+    <ClCompile Include="May19.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
