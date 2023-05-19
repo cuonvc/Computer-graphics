@@ -245,7 +245,8 @@ void display() {
 
 	glClear(GL_COLOR_BUFFER_BIT);
 
-//	cau1: not element
+//	cau1: element
+	drawing();
 
 //	cau2: element
 	// if (isShowing == false) {
@@ -263,12 +264,13 @@ void display() {
 	// }
 
 //cau4: element
-	if (isShowing == false) {
-		drawing();
-	} else {
-		drawing();
-		aPartOfShape();
-	}
+	// if (isShowing == false) {
+	// 	drawing();
+	// } else {
+	// 	drawing();
+	// 	aPartOfShape();
+	// }
+	//
 	
 	glFlush();
 }
